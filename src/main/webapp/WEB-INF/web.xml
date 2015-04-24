@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>  
+        <servlet-name>TestServlet</servlet-name>  
+        <servlet-class>com.jy.servlet.TestServlet</servlet-class>  
+    </servlet>  
+  
+    <!-- url-pattern中配置的/TestServlet用于指定该Servlet的访问路径 -->  
+    <servlet-mapping>  
+        <servlet-name>TestServlet</servlet-name>  
+        <url-pattern>/TestServlet</url-pattern>  
+    </servlet-mapping>  
+    
+    <servlet>  
+        <servlet-name>QueryCet46Servlet</servlet-name>  
+        <servlet-class>com.jy.servlet.QueryCet46Servlet</servlet-class>  
+    </servlet>  
+  
+    <!-- url-pattern中配置的/QueryCet46Servlet用于指定该Servlet的访问路径 -->  
+    <servlet-mapping>  
+        <servlet-name>QueryCet46Servlet</servlet-name>  
+        <url-pattern>/QueryCet46Servlet</url-pattern>  
+    </servlet-mapping>  
+    
+    <servlet>  
+        <servlet-name>PhoneFreeServlet</servlet-name>  
+        <servlet-class>com.jy.servlet.PhoneFreeServlet</servlet-class>  
+    </servlet>  
+  
+    <!-- url-pattern中配置的话费充值用于指定该Servlet的访问路径 -->  
+    <servlet-mapping>  
+        <servlet-name>PhoneFreeServlet</servlet-name>  
+        <url-pattern>/PhoneFreeServlet</url-pattern>  
+    </servlet-mapping>  
+  
+</web-app>

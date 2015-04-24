@@ -1,0 +1,159 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>四六级查询</title>
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<style type="text/css">
+			*{margin:0px;padding:0px;}
+			body{background-color: #ECECEC;font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+    			margin: 0;overflow-x: hidden;color: #666666;}
+			.logo{width:100%;}
+			.cardexplain{margin:11px 10px 20px 9px;height:260px;border:1px solid #C6C6C6;
+				background-color:rgba(255, 255, 255, 0.9);text-align:left;font-size:14px;border-radius:5px;
+				-webkit-border-radius:5px;-moz-border-radius:5px;-moz-box-shadow:0 1px 1px #f6f6f6;-webkit-box-shadow:0 1px 1px #f6f6f6;
+				box-shadow:0 1px 1px #f6f6f6;margin-bottom:11px;display:block;}
+			.cardexplain h2,.uerinfo h2{color: #373B3E;text-align: left;font-weight:normal; font-size: 16px;line-height: 20px;
+    			padding: 10px 0 10px 10px;border-bottom:1px dotted #C6C6C6;border-radius:5px;}
+			.cardexplain .text{padding:5px 0 0 10px;}
+			.uerinfo{height:180px;background-color:rgba(255, 255, 255, 0.9);margin:11px 10px 20px 9px;;border-radius:8px;border:1px solid rgba(255, 255, 255, 0.9); }
+			.inputkuang th{color: black;padding:0; font-size:14px; font-weight:normal;text-align: center;width:79px;}
+			.inputkuang td{color: #999999;padding:0;}
+			.footReturn {display: block;margin: 11px auto;padding:0;position: relative;}
+			.footerbtn{ width:50%; float:left;}
+			.px {
+				position: relative;
+				background-color: transparent;
+				color: #999999;
+				display: block;
+				width: 100%; 
+				padding:5px;
+				font-size: 16px;
+				margin:5px auto;
+				font-family:Arial, Helvetica, sans-serif;
+				border:0;
+				-webkit-appearance:none;
+			}
+			.px[type="text"] {
+			     width: 100%; 
+			     box-sizing: border-box;
+			     -webkit-box-sizing:border-box;
+			     -moz-box-sizing: border-box;
+			}
+			.px[type="password"] {
+			     width: 100%; 
+			     box-sizing: border-box;
+			     -webkit-box-sizing:border-box;
+			     -moz-box-sizing: border-box;
+			}
+
+		   .submit {
+				background-color:#179F00;
+				padding:10px 20px;
+				font-size:16px;
+				text-decoration:none;
+				border:1px solid #0B8E00;
+				background-image: linear-gradient(bottom,  #179F00 0%, #5DD300 100%);
+				background-image: -o-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
+				background-image: -moz-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
+				background-image: -webkit-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
+				background-image: -ms-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
+				background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,
+				color-stop(0, #179F00),
+				color-stop(1, #5DD300)
+				);
+				-webkit-box-shadow: 0 1px 0 #94E700 inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0 1px 0 #94E700 inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+				box-shadow: 0 1px 0 #94E700 inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				-o-border-radius: 5px;
+				border-radius: 5px;
+				color: #ffffff;
+				display:block;
+				text-align:center;
+				text-shadow:0 1px rgba(0, 0, 0, 0.2);
+		 	}
+
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="logo">
+			<img src="images/logo.jpg" alt="logo" width="100%" height="90px" />
+		</div>
+		
+		<div class="cardexplain">
+			<h2>全国大学英语四六级考试成绩查询</h2>
+			<div class="text">
+				查询方法<br/>
+				①搜索并关注公众号“周冲小号”<br/>
+				②回复“107”
+			</div>
+		</div>
+		<form method="post" action="QueryCet46Servlet" id="form" onsubmit="return tgSubmit()">
+		<div class="uerinfo">
+				<h2 style="border-bottom:1px solid #C6C6C6;background-color:rgba(232,232,232,0.9);">查分入口</h2>
+				<div class="inputinfo">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="inputkuang">
+						<tbody>
+							<tr>
+								<th>姓名</th>
+								<td><input type="text" class="px" placeholder="请输入姓名" id="xm" name="xm" value=""></td>
+							</tr>
+							<tr>
+								<th>准考证号</th>
+								<td><input type="text" class="px" placeholder="请输入准考证号" id="zkzh" name="zkzh" value="" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+			<div class="footReturn" style="text-align:center">
+				<input type="submit" style="margin:0 auto 20px auto;width:90%" class="submit" value="提交查询">
+			</div>
+		</form>
+			<script>
+				function showTip(tipTxt) {
+					var div = document.createElement('div');
+					div.innerHTML = '<div class="deploy_ctype_tip"><b style="background-color:#FAFFBD;">' + tipTxt + '</b></div>';
+					var tipNode = div.firstChild;
+					$(".cardexplain").after(tipNode);
+					setTimeout(function () {
+						$(tipNode).remove();
+					}, 1500);
+				}
+				function tgSubmit(){
+					var name=$("#xm").val();
+					if($.trim(name) == ""){
+						showTip('请输入姓名')
+						return false;
+					}
+					var number=$("#zkzh").val();
+					if($.trim(number) == ""){
+						showTip('请输入准考证号')
+						return false;
+					}
+					var patrn = /^[0-9]{15}$/;
+					if (!patrn.exec($.trim(number))) {
+						showTip('请正确输入准考证号')
+						return false;
+					}
+					return true;
+				}
+			</script>
+
+        
+	</body>
+</html>
