@@ -94,13 +94,22 @@ public class CoreService {
 						respContent = torespArticleMessage(fromUserName, toUserName, content);
 					}else if(reqContent.equals("108")){
 						Article art = new Article();
-						art.setTitle("话费充值");
-						art.setDescription("充值方法\n①搜索并关注公众号“周冲小号”\n②回复“108”");
+						art.setTitle("2048小游戏");
+						art.setDescription("小游戏\n①搜索并关注公众号“周冲小号”\n②回复“108”");
+						art.setPicUrl("http://zcwx.oschina.mopaas.com/images/2048.jpg");
+						art.setUrl("http://zcwx.oschina.mopaas.com/2048.html");
+						List<Article> content = new ArrayList<Article>();
+						content.add(art);
+						respContent = torespArticleMessage(fromUserName, toUserName, content);
+						
+						
+						
+						/*art.setDescription("充值方法\n①搜索并关注公众号“周冲小号”\n②回复“108”");
 						art.setPicUrl("http://zcwx.oschina.mopaas.com/images/hfcz.jpg");
 						art.setUrl("http://zcwx.oschina.mopaas.com/phonefreecharge.html");
 						List<Article> content = new ArrayList<Article>();
 						content.add(art);
-						respContent = torespArticleMessage(fromUserName, toUserName, content);
+						respContent = torespArticleMessage(fromUserName, toUserName, content);*/
 					}else if(reqContent.equals("@")){
 						respContent = getMainMenu();
 						respContent = torespTextMessage(fromUserName,toUserName,respContent);
@@ -380,7 +389,7 @@ public class CoreService {
 	    buffer.append("105  人脸识别").append("\n");   
 	    buffer.append("106  街景地图").append("\n");
 	    buffer.append("107  四六级查询").append("\n");
-	    buffer.append("108  话费充值").append("\n");
+	    buffer.append("108  小游戏").append("\n");
 	    buffer.append("\n------------------------------\n");
 	    buffer.append("回复“@”显示此帮助菜单");  
 	    return buffer.toString();  
